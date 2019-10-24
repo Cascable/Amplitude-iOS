@@ -1,5 +1,27 @@
 ## Unreleased
 
+## 4.8.2 (September 19, 2019)
+
+* Ensure background tasks are always ended and add safeguard before retrieving the app by checking for valid uploadTaskID
+
+
+## 4.8.1 (September 19, 2019)
+
+* Suppress NSLogs for non-dev environments.
+
+## 4.8.0 (September 3, 2019)
+
+* Identify Macs for Mac Catalyst support.
+
+## 4.7.1 (August 20, 2019)
+
+* Fix issue where tag wasn't included in tag spec
+
+## 4.7.0 (August 20, 2019)
+
+* Fix bug where background task might be stopped before final events are flushed
+* Revert logic to restore db from memory on potential db resets
+
 ## 4.6.0 (March 1, 2019)
 
 * Add support for installing on tvOS platform via Carthage

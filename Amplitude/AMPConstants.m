@@ -4,7 +4,7 @@
 #import "AMPConstants.h"
 
 NSString *const kAMPLibrary = @"amplitude-ios";
-NSString *const kAMPVersion = @"4.6.0";
+NSString *const kAMPVersion = @"4.8.2";
 NSString *const kAMPEventLogDomain = @"api.amplitude.com";
 NSString *const kAMPEventLogUrl = @"https://api.amplitude.com/";
 NSString *const kAMPDefaultInstance = @"$default_instance";
@@ -27,8 +27,13 @@ const int kAMPDBFirstVersion = 2; // to detect if DB exists yet
 #else  // iOS, simulator, etc.
     const int kAMPEventUploadThreshold = 30;
     const int kAMPEventMaxCount = 1000;
+#if TARGET_OS_MACCATALYST
+    NSString *const kAMPPlatform = @"mac";
+    NSString *const kAMPOSName = @"mac";
+#else
     NSString *const kAMPPlatform = @"iOS";
     NSString *const kAMPOSName = @"ios";
+#endif
 #endif
 
 const int kAMPEventUploadMaxBatchSize = 100;
